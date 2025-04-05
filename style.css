@@ -260,7 +260,6 @@ section {
     background-color: var(--light-color);
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    overflow-x: auto;
 }
 
 .schedule-table {
@@ -512,5 +511,10 @@ button:hover {
     
     .container {
         padding: 2rem 1rem;
+    }
+
+    .schedule-table th, .schedule-table td {
+        padding: 0.8rem;
+        font-size: 1rem;
     }
 }
