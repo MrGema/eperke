@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vásárolj friss epret, lekvárokat és szezonális gyümölcsöket közvetlenül családi gazdaságunktól.">
+    <!--Base-->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+    <!--leaflet map-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <title>Gombási Eper</title>
+    <link rel="icon" type="image/x-icon" href="pictures/logo.png">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="pictures/logo.png" alt="Eper logo">
+                <h1>Gombási Eper</h1>
+            </div>
+            <button class="hamburger">≡</button>
+            <ul class="nav-links">
+                <li><a href="#about">Rólunk</a></li>
+                <li><a href="#strawberries">Termékeink</a></li>
+                <li><a href="#schedule">Piacok</a></li>
+                <li><a href="#location">Gyere el hozzánk személyesen</a></li>
+                <li><a href="#gallery">Galéria</a></li>
+                <li><a href="#contact">Elérhetőségek</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Gombási Eper</h2>
+        <p>Házon belül termelt 20 éve. Tapasztalja meg a nyár ízét kézzel szedett, természetesen termesztett eperünkkel.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <div class="section-title">
+            <h2>Rólunk</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="pictures/eperSator.jpg" alt="Sator Hatterkep">
+            </div>
+            <div class="about-text">
+                <p>Mi közel 20 éve foglalkozunk eper termesztéssel.</p>
+                <p>Családi gazdaságunkban szenvedéllyel és gondossággal termesztjük a legédesebb, legzamatosabb epreket. Kizárólag friss, kézzel szedett gyümölcsöt kínálunk, hogy minden falat igazi élmény legyen. Ha valódi, hazai eperre vágysz, nálunk a helyed!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strawberry Types Section -->
+    <section id="strawberries" class="strawberry-types">
+         <div class="container">
+
+            <div class="types-group">
+                <div class="section-title">
+                    <h2>Termékeink</h2>
+                    <p>Számos gyümölcsfajtát termesztünk, frissen és feldolgozott formában is elérhetők, köztük kiváló minőségű lekvárok.</p>
+                </div>
+                <div class="subsection-title">
+                    <h3>Eper</h3>
+                    <p>Ezek az eper fajták, amiket jelenleg termelünk:</p>
+                </div>  
+            <div class="types-container">              
+                <div class="type-card">
+                    <div class="type-info">
+                        <h3>Clery</h3>
+                        <p>Korai érésű fajta, kiváló édes ízzel és szép, fényes bogyókkal</p>
+                    </div>
+                </div>
+                <div class="type-card">
+                    <div class="type-info">
+                        <h3>Jolly</h3>
+                        <p>Erőteljes növekedésű, bőtermő fajta. Íze kiegyensúlyozott, külleme tetszetős.</p>
+                    </div>
+                </div>
+                <div class="type-card">
+                    <div class="type-info">
+                        <h3>Murano</h3>
+                        <p>Napsemleges eper, amely hosszan terem. Nagy méretű, ízletes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="types-group">
+            <div class="subsection-title">
+                <h3>Egyéb</h3>
+                <p>Ezekkel is kereskedünk: </p>
+            </div>
+
+            <div class="types-container">
+                <div class="type-card">
+                    <div class="type-info">
+                        <h3>Sárgabarack</h3>
+                        <p>Lédús, édes gyümölcs, frissen és lekvárként is kapható.</p>
+                    </div>
+                </div>
+                <div class="type-card">
+                    <div class="type-info">
+                        <h3>Meggy</h3>
+                        <p>Fanyarabb ízű gyümölcs, kiváló süteményekhez, befőzéshez és szörpök készítéséhez.</p>
+                    </div>
+                </div>
+                <div class="type-card">
+                    <div class="type-info">
+                        <h3>Cseresznye</h3>
+                        <p>Édes, ropogós gyümölcs, friss fogyasztásra és tartósításra is ideális.</p>
+                    </div>
+                </div>
+                <div class="type-card">
+                    <div class="type-info">
+                        <h3>Áfonya</h3>
+                        <p>Vitaminokban gazdag, kisméretű gyümölcs, frissen kínáljuk.</p>
+                    </div>
+                </div>
+                <div class="type-card">
+                    <div class="type-info">
+                        <h3>Házi lekvárok</h3>
+                        <p>Különböző gyümölcsökből készült házi lekvárok: eper, sárgabarack, meggy, áfonya, hagyományos módon készítve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Market Schedule Section -->
+    <section id="schedule" class="container">
+        <div class="section-title">
+            <h2>Piaci beosztás</h2>
+            <p>Keressen minket ezeken a helyi termelői piacokon egész szezonban</p>
+        </div>
+        <div class="schedule-container">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Nap</th>
+                        <th>Helyszín</th>
+                        <th>Órák</th>
+                        <th>Hónapok</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kedd, Péntek, Vasárnap</td>
+                        <td>Albertirsa</td>
+                        <td>7.00 - 11:00</td>
+                        <td>Május - Július</td>
+                    </tr>
+                    <tr>
+                        <td>Csütörtök</td>
+                        <td>Pilis</td>
+                        <td>7.00 - 11:00</td>
+                        <td>Május - Július</td>
+                    </tr>
+                    <tr>
+                        <td>Szerda, Szombat</td>
+                        <td>Monor</td>
+                        <td>7.00 - 11:00</td>
+                        <td>Május - Július</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="container">
+        <div class="section-title">
+            <h2>Látogass el hozzánk személyesen</h2>
+            <p>Ha a legfrissebb epreket szeretné, látogasson el hozzánk!</p>
+        </div>
+        <div class="location-container">
+            <div class="location-info">
+                <h3>Információk</h3>
+                <ul>
+                    <li><strong id="location-info-important">FONTOS:</strong>Telefonon előre egyesztett időpont alapján várjuk önöket reggel 6 tól akár délután 4 ig</li>
+                    <li><strong>Tel.: </strong>+36 70 364 8021</li>
+                    <li><strong>Útvonal:</strong> Az Irsai útról, az Euro Sol kft. irányába kell eltérni. Innen, kb. 500 méter mulva lesz egy kereszteződés ahol balra kell elkanyarodni. Itt 200 méter múlva lesz egy földút egyensen, azon kell lemenni és meg is érdekett!</strong> </li>
+                </ul>
+                <p></p>
+                <button onclick="startNavigation()">Indulás!</button>
+            </div>
+            <div id="map" class="map-container">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container">
+        <div class="section-title">
+            <h2>Galéria</h2>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <a href="pictures/eperKez1.jpg" data-fancybox="gallery">
+                    <img src="pictures/eperKez1.jpg" alt="Eper kezben">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="pictures/eperKez3.jpg" data-fancybox="gallery">
+                    <img src="pictures/eperKez3.jpg" alt="Eper kezben">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="pictures/eperKez2.jpg" data-fancybox="gallery">
+                    <img src="pictures/eperKez2.jpg" alt="Eper kezben">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="pictures/eperSator.jpg" data-fancybox="gallery">
+                    <img src="pictures/eperSator.jpg" alt="Eper Sator">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="pictures/eperSator3.jpg" data-fancybox="gallery">
+                    <img src="pictures/eperSator3.jpg" alt="Eper Sator">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="pictures/eperBokorKozel2.jpg" data-fancybox="gallery">
+                    <img src="pictures/eperBokorKozel2.jpg" alt="Eper Bokor Kozelrol">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="pictures/eperBokorKozel.jpg" data-fancybox="gallery">
+                    <img src="pictures/eperBokorKozel.jpg" alt="Eper Bokor Kozelrol">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="pictures/eperBokor2.jpg" data-fancybox="gallery">
+                    <img src="pictures/eperBokor2.jpg" alt="Eper Bokor">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="pictures/eperKez4.jpg" data-fancybox="gallery">
+                    <img src="pictures/eperKez4.jpg" alt="Eper kezben">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Gombási Eper</h3>
+                <p>Házon belül termelt 20 éve. Tapasztalja meg a nyár ízét kézzel szedett, természetesen termesztett eperünkkel.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Gyors linkek</h3>
+                <ul>
+                    <li><a href="#about">Rólunk</a></li>
+                    <li><a href="#strawberries">Epreink</a></li>
+                    <li><a href="#schedule">Piacok</a></li>
+                    <li><a href="#location">Gyere el hozzánk személyesen</a></li>
+                    <li><a href="#gallery">Galéria</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Kapcsolatok</h3>
+                <p>Tel.: +36 70 364 8021</p>
+                <p>Email: markogombasi@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
