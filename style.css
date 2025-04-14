@@ -87,11 +87,26 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.0);
     background-blend-mode: lighten;
     color: var(--light-color);
     text-align: center;
     padding: 8rem 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem 2rem;
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .hero h2 {
@@ -107,6 +122,14 @@ header {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+.hero-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
 .cta-button {
     display: inline-block;
     background-color: var(--primary-color);
@@ -115,11 +138,28 @@ header {
     border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
 }
 
 .cta-button:hover {
     background-color: #c62828;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cta-secondary {
+    background-color: transparent;
+    color: var(--light-color);
+    border: 2px solid var(--light-color);
+}
+
+.cta-secondary:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    border-color: var(--light-color);
 }
 
 /* Main Content Sections */
@@ -288,6 +328,108 @@ section {
     background-color: #f9f9f9;
 }
 
+/* Testimonials Section */
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-color: var(--light-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-content {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.7;
+}
+
+.testimonial-content::before {
+    content: '"';
+    font-size: 5rem;
+    color: var(--accent-color);
+    position: absolute;
+    top: -2.5rem;
+    left: -1rem;
+    opacity: 0.4;
+}
+
+.testimonial-author {
+    text-align: right;
+}
+
+.testimonial-author p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.testimonial-author .city {
+    font-weight: normal;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Seasonal Calendar */
+.seasonal-container {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 0 auto;
+    background-color: var(--light-color);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.seasonal-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.seasonal-table th, .seasonal-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.seasonal-table th {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.seasonal-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.seasonal-table .available {
+    background-color: var(--accent-color);
+    position: relative;
+}
+
+.seasonal-table .available::after {
+    content: '✓';
+    color: var(--primary-color);
+    font-weight: bold;
+}
 
 /* Location Section */
 .location-container {
@@ -541,5 +683,35 @@ button:hover {
 
     .gallery-item {
         margin: 0 auto;
+    }
+
+    .glass-container {
+        padding: 1.5rem;
+        width: 90%;
+    }
+
+    .hero-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .testimonial-card {
+        width: 100%;
+    }
+    
+    .seasonal-container {
+        max-width: 95%;
+        padding: 0.5rem;
+    }
+    
+    .seasonal-table th, .seasonal-table td {
+        padding: 0.4rem;
+        font-size: 0.8rem;
     }
 }

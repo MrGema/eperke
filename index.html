@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vásárolj friss epret, lekvárokat és szezonális gyümölcsöket közvetlenül családi gazdaságunktól.">
+    <meta name="keywords" content="eper, szamóca, gyümölcs, friss gyümölcs, házi lekvár, Albertirsa, Pilis, Monor, termelői piac">
+    <meta name="author" content="Gombási Eper">
+    <meta property="og:title" content="Gombási Eper - Friss gyümölcsök közvetlenül a termelőtől">
+    <meta property="og:description" content="Vásárolj friss epret, lekvárokat és szezonális gyümölcsöket közvetlenül családi gazdaságunktól.">
+    <meta property="og:image" content="pictures/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://gombasieper.hu">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="hu_HU">
+    <link rel="canonical" href="https://gombasieper.hu" />
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KMGHFQM6LH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KMGHFQM6LH');
+    </script>
+    
     <!--Base-->
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
@@ -18,17 +40,36 @@
 
     <title>Gombási Eper</title>
     <link rel="icon" type="image/x-icon" href="pictures/logo.png">
+    
+    <!-- Structured Data for better SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FarmStore",
+      "name": "Gombási Eper",
+      "image": "pictures/logo.png",
+      "description": "Vásárolj friss epret, lekvárokat és szezonális gyümölcsöket közvetlenül családi gazdaságunktól.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dánszentmiklós",
+        "addressCountry": "HU"
+      },
+      "telephone": "+36 70 364 8021",
+      "email": "gombasieper@gmail.com",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+          ],
+          "opens": "06:00",
+          "closes": "16:00"
+        }
+      ],
+      "priceRange": "$$"
+    }
+    </script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KMGHFQM6LH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KMGHFQM6LH');
-</script>
 
 <body>
     <!-- Header and Navigation -->
@@ -52,8 +93,14 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h2>Gombási Eper</h2>
-        <p>Házon belül termelt 20 éve. Tapasztalja meg a nyár ízét kézzel szedett, természetesen termesztett eperünkkel.</p>
+        <div class="glass-container">
+            <h2>Gombási Eper</h2>
+            <p>Házon belül termelt 20 éve. Tapasztalja meg a nyár ízét kézzel szedett, természetesen termesztett eperünkkel.</p>
+            <div class="hero-cta-buttons">
+                <a href="#location" class="cta-button">Látogass meg minket</a>
+                <a href="#schedule" class="cta-button cta-secondary">Találkozz velünk a piacon</a>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
@@ -201,7 +248,7 @@
                 <ul>
                     <li><strong id="location-info-important">FONTOS:</strong>Telefonon előre egyesztett időpont alapján várjuk önöket reggel 6 tól akár délután 4 ig</li>
                     <li><strong>Tel.: </strong>+36 70 364 8021</li>
-                    <li><strong>Útvonal:</strong> Az Irsai útról, az Euro Sol kft. irányába kell eltérni. Innen, kb. 500 méter mulva lesz egy kereszteződés ahol balra kell elkanyarodni. Itt 200 méter múlva lesz egy földút egyensen, azon kell lemenni és meg is érdekett!</strong> </li>
+                    <li><strong>Útvonal:</strong> Az Irsai útról, az Euro Sol kft. irányába kell eltérni. Innen, kb. 500 méter múlva lesz egy kereszteződés ahol balra kell elkanyarodni. Itt 200 méter múlva lesz egy földút egyensen, azon kell lemenni és meg is érdezett!</strong> </li>
                 </ul>
                 <p></p>
                 <button onclick="startNavigation()">Indulás!</button>
@@ -291,3 +338,4 @@
     </footer>
 </body>
 </html>
+``` 

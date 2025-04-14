@@ -9,7 +9,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.marker([latitude, longitude]).addTo(map)
-    .bindPopup("Itt találsz meg minket")
+    .bindPopup("Itt talÃ¡lsz meg minket")
     .openPopup();
 
 function startNavigation() {
