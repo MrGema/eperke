@@ -75,10 +75,11 @@ header {
 
 .hamburger {
     display: none;
-    cursor: pointer;
+    cursor: pointer;;
     background: none;
     border: none;
     font-size: 1.5rem;
+    z-index: 10;
 }
 
 /* Hero Section */
@@ -608,8 +609,9 @@ button:hover {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         padding: 1rem;
+        position: relative;
     }
     
     .nav-links {
@@ -630,9 +632,28 @@ button:hover {
     
     .hamburger {
         display: block;
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+        visibility: visible;
         position: absolute;
-        top: 1rem;
+        top: 2rem;
         right: 1rem;
+        transform: translateY(-50%);
+    }
+
+    .logo {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .logo h1 {
+        text-align: center;
+        width: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .hero {
