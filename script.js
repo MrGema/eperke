@@ -1,4 +1,4 @@
-//map
+/*map
 const latitude = 47.204116283073446;
 const longitude = 19.57248640423961;
 
@@ -15,7 +15,7 @@ L.marker([latitude, longitude]).addTo(map)
 function startNavigation() {
     window.open(`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`, '_blank');
 }
-
+*/
 
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
